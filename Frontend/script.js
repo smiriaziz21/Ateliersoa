@@ -1,7 +1,7 @@
 const API_URL = "http://localhost:8085/LogementRendezVous_Etudiant_war_exploded/api/";// 🔄 Récupérer et afficher la liste des logements
 async function fetchLogements() {
     try {
-        const response = await fetch(`${"http://localhost:8085/LogementRendezVous_Etudiant_war_exploded/api/logements"}`);
+        const response = await fetch(`${API_URL}logements`);
         if (!response.ok) throw new Error("Erreur lors de la récupération des logements");
 
         const logements = await response.json();
@@ -37,7 +37,8 @@ document.getElementById("logementForm").addEventListener("submit", async (e) => 
         gouvernorat: document.getElementById("gouvernorat").value,
         type: document.getElementById("type").value,
         description: document.getElementById("description").value,
-        prix: parseFloat(document.getElementById("prix").value)
+        prix: parseFloat(document.getElementById("prix").value),
+        reference: document.getElementById("reference").value
     };
 
     console.log("Sending logement:", logement); // Debugging statement
