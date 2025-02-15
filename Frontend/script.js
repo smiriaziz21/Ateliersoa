@@ -1,7 +1,7 @@
 const API_URL = "http://localhost:8085/LogementRendezVous_Etudiant_war_exploded/api/";// 🔄 Récupérer et afficher la liste des logements
 async function fetchLogements() {
     try {
-        const response = await fetch(`${API_URL}logements`);
+        const response = await fetch(`${"http://localhost:8085/LogementRendezVous_Etudiant_war_exploded/api/logements"}`);
         if (!response.ok) throw new Error("Erreur lors de la récupération des logements");
 
         const logements = await response.json();
