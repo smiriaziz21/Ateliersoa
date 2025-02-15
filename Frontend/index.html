@@ -1,0 +1,40 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Logements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Liste des Logements</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Référence</th>
+        <th>Adresse</th>
+        <th>Délegation</th>
+        <th>Gouvernorat</th>
+        <th>Type</th>
+        <th>Prix</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="logementsTable"></tbody>
+</table>
+
+<h2>Ajouter un Logement</h2>
+<form id="logementForm">
+    <input type="text" id="adresse" placeholder="Adresse" required>
+    <input type="text" id="delegation" placeholder="Délegation" required>
+    <input type="text" id="gouvernorat" placeholder="Gouvernorat" required>
+    <input type="text" id="type" placeholder="Type" required>
+    <input type="text" id="description" placeholder="Description" required>
+    <input type="number" id="prix" placeholder="Prix" required>
+    <button type="submit">Ajouter</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
